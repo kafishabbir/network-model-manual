@@ -1,0 +1,335 @@
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+
+	\begin{scope}[rotate=45]
+		\draw[fill=cw] (0, 0.21) rectangle (4, -0.21);
+		\draw[fill=cw] (4, 0) circle [radius = .5];
+		\node[] at (4, 0) {$\nu_1$};
+		\draw[->, very thick, draw=blue] (1.5, 0) -- (2.5, 0);
+		\node[] at (2, -0.6) {$Q_{31}$};
+	\end{scope}
+
+	\begin{scope}[rotate=135]
+		\draw[fill=cw] (0, 0.20) rectangle (4, -0.20);
+		\draw[fill=cw] (4, 0) circle [radius = .5];
+		\node[] at (4, 0) {$\nu_2$};
+		\draw[->, very thick, draw=blue] (1.5, 0) -- (2.5, 0);
+		\node[] at (2, -0.6) {$Q_{32}$};
+	\end{scope}
+
+	\begin{scope}[rotate=-45]
+		\draw[fill=cw] (0, 0.23) rectangle (4, -0.23);
+		\draw[fill=cw] (4, 0) circle [radius = .5];
+		\node[] at (4, 0) {$\nu_4$};
+		\draw[<-, very thick, draw=blue] (1.5, 0) -- (2.5, 0);
+		\node[] at (2, -0.6) {$Q_{43}$};
+	\end{scope}
+
+	\begin{scope}[rotate=-135]
+		\draw[fill=cw] (0, 0.20) rectangle (4, -0.20);
+		\draw[fill=cw] (4, 0) circle [radius = .5];
+		\node[] at (4, 0) {$\nu_5$};
+		\draw[<-, very thick, draw=blue] (1.5, 0) -- (2.5, 0);
+		\node[] at (2, -0.6) {$Q_{53}$};
+	\end{scope}
+	\draw[fill=cw] (0, 0) circle [radius = .5];
+	\node[] at (0, 0) {$\nu_3$};
+	\end{tikzpicture}
+
+	\caption{}
+	\label{fig:101}
+\end{figure}
+
+\begin{align*}
+	\sum Q_{in} &= \sum Q_{out}\\
+	Q_{53} + Q_{43} &= Q_{32} + Q_{31}\\
+	Q_{31} + Q_{32} + Q_{34} + Q_{35} &= 0, \quad Q_{ij} = -Q_{ji}\\
+	\sum_{j} Q_{ij} &= 0, \quad i = 3, \quad j = (1, 2, 4, 5)
+\end{align*}
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+	\draw[fill=cw] (0, 0.5) rectangle (5.5, -0.5);
+	\draw[fill=cw] (0, 0) ellipse [x radius = 0.25, y radius = 0.5];
+	\draw[fill=cw] (5.5, 0) ellipse [x radius = 0.25, y radius = 0.5];
+
+	\node[] at (0, 1) {$P_i$};
+	\node[] at (5.5, 1) {$P_j$};
+	\node[] at (-0.9, 0) {$Q$};
+
+	\draw[->, very thick, draw=blue](-0.5, 0.25) -- (1, 0.25);
+	\draw[->, very thick, draw=blue](-0.5, 0) -- (1.5, 0);
+	\draw[->, very thick, draw=blue](-0.5, -0.25) -- (1, -0.25);
+
+	\draw[<->] (0, -0.6) -- (5.5, -0.6) node[midway, below] {$L$};
+
+	\draw[dashed] (5.5, 0.5) -- (7, 0.5);
+	\draw[dashed] (5.5, 0) -- (7, 0);
+	\draw[<->] (6.8, 0) -- (6.8, 0.5) node[midway, right] {$R$};
+	\end{tikzpicture}
+
+	\caption{}
+	\label{fig:103}
+\end{figure}
+
+
+\[
+	Q = \frac{\pi R^4}{8 \mu}  \frac{\Delta P}{L},\quad \Delta P = P_i - P_j
+\]
+
+The task is to find $Q$.
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+	\draw[fill=cw] (0, 0.32) rectangle (5, -0.32);
+	\draw[fill=cw] (5, 0.21) rectangle (9, -0.21);
+
+	\draw[fill=cw] (0, 0) circle [radius = .5];
+	\draw[fill=cw] (5, 0) circle [radius = .5];
+	\draw[fill=cw] (9, 0) circle [radius = .5];
+
+
+	\draw[->, very thick, draw=blue](-1.6, 0) -- (-0.6, 0) node[midway, above] {$Q = ?$};
+
+	\node[] at (0, 0) {$\nu_1$};
+	\node[] at (0, 1) {$P_1 = 100$};
+	\node[] at (4, 1.2) {$\mu = 1$};
+	\node[] at (5, 0) {$\nu_2$};
+	\node[] at (9, 0) {$\nu_3$};
+	\node[] at (9, 1) {$P_3 = 10$};
+
+	\draw[->, very thick, draw=blue](2, 0) -- (3, 0);
+	\node[] at (2.5, -1) {$R=1,\;L = 10$};
+	\draw[->, very thick, draw=blue](6.5, 0) -- (7.5, 0);
+	\node[] at (6.5, -1) {$R=0.7,\;L = 8$};
+	\end{tikzpicture}
+
+	\caption{}
+	\label{fig:102}
+\end{figure}
+\[
+	Q_{ij} = \frac{\pi R_{ij}^4}{8 \mu L_{ij}} (P_i - P_j)
+\]
+
+\[
+	Q_{ij} = A_{ij}(P_i - P_j), \quad A_{ij} = \frac{\pi R_{ij}^4}{8 \mu L_{ij}}
+\]
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+	\draw[fill=cw] (0, 0.32) rectangle (5, -0.32);
+	\draw[fill=cw] (5, 0.21) rectangle (9, -0.21);
+
+	\draw[fill=cw] (0, 0) circle [radius = .5];
+	\draw[fill=cw] (5, 0) circle [radius = .5];
+	\draw[fill=cw] (9, 0) circle [radius = .5];
+
+
+	\node[] at (0, 0) {$\nu_1$};
+	\node[] at (0, 1) {$P_1$};
+	\node[] at (5, 0) {$\nu_2$};
+	\node[] at (5, 1) {$P_2$};
+	\node[] at (9, 0) {$\nu_3$};
+	\node[] at (9, 1) {$P_3$};
+
+	\draw[->, very thick, draw=blue](3.3, 0) -- (4.3, 0);
+	\node[] at (4, -0.6) {$Q_{12}$};
+	\draw[->, very thick, draw=blue](5.7, 0) -- (6.7, 0);
+	\node[] at (6, -0.6) {$Q_{23}$};
+	\end{tikzpicture}
+
+	\caption{}
+	\label{fig:104}
+\end{figure}
+
+\[
+	\sum_{j}Q_{ij} = 0,\;i = 2,\;j=(1, 3)
+\]
+\[
+	Q_{21} + Q_{23} = 0
+\]
+\[
+	A_{21}(P_2 - P_1) +	A_{23}(P_2 - P_3) = 0
+\]
+\[
+	(A_{21} + A_{23})P_2 - A_{21} P_1 - A_{23}P_3 = 0
+\]
+\[
+	P_1 = 100
+\]
+\[
+	- A_{21} P_1 + (A_{21} + A_{23})P_2  - A_{23}P_3 = 0
+\]
+\[
+	P_3 = 10
+\]
+\[
+\begin{bmatrix}
+    1 & 0 & 0 \\
+    - A_{21} & (A_{21} + A_{23}) & -A_{23} \\
+    0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+    P_1 \\
+    P_2  \\
+    P_3
+\end{bmatrix}
+=
+\begin{bmatrix}
+	100 \\
+    0 \\
+    10
+\end{bmatrix}
+\]
+\[
+	\mathbf{M} \vec{p} = \vec{b}
+\]
+\[
+ M =
+ \begin{bmatrix}
+    1 & 0 & 0 \\
+    - A_{21} & (A_{21} + A_{23}) & -A_{23} \\
+    0 & 0 & 1
+\end{bmatrix},
+\quad
+\vec{p} =
+\begin{bmatrix}
+    P_1 \\
+    P_2  \\
+    P_3
+\end{bmatrix},
+\quad
+\vec{b}=
+\begin{bmatrix}
+	100 \\
+    0 \\
+    10
+\end{bmatrix}
+\]
+\[
+	A_{21} = \frac{\pi R_{21}^4}{8 \mu L_{21}} = \frac{\pi (1)^4}{8 \mu (10)} = \num{0.039}
+\]
+\[
+	A_{23} = \frac{\pi R_{23}^4}{8 \mu L_{23}} = \frac{\pi (0.7)^4}{8 \mu (8)} = \num{0.012}
+\]
+\[
+	\vec{p} = \mathbf{M^{-1}} \vec{b}
+\]
+\[
+\vec{p} =
+{\begin{bmatrix}
+    1 & 0 & 0 \\
+    -\num{0.039} & \num{0.051} & -\num{0.012} \\
+    0 & 0 & 1
+\end{bmatrix}}^{-1}
+\begin{bmatrix}
+	100 \\
+    0 \\
+    10
+\end{bmatrix}
+\]
+\[
+\vec{p} =
+\begin{bmatrix}
+	100 \\
+    79.3 \\
+    10
+\end{bmatrix}
+\]
+\[
+	Q_{12} = A_{12} (P_1 - P_2) = \num{0.039} (100 - 79.3) = \num{0.81}
+\]
+\[
+	Q_{12} = A_{12} (P_2 - P_3) = \num{0.012} (79.3 - 10) = \num{0.81}
+\]
+\[
+	Q = Q_{12} = Q_{23} = \num{0.81}
+\]
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+	\draw[fill=cw] (0, 0.32) rectangle (5, -0.32);
+	\draw[fill=cw] (5, 0.21) rectangle (9, -0.21);
+
+	\draw[fill=cw] (0, 0) circle [radius = .5];
+	\draw[fill=cw] (5, 0) circle [radius = .5];
+	\draw[fill=cw] (9, 0) circle [radius = .5];
+
+
+	\draw[->, very thick, draw=blue](-1.8, 0) -- (-0.8, 0) node[midway, above] {$Q = \num{0.81}$};
+
+	\node[] at (0, 0) {$\nu_1$};
+	\node[] at (0, 1) {$P_1 = 100$};
+	\node[] at (5, 1) {$P_2 = \num{73.9}$};
+	\node[] at (5, 0) {$\nu_2$};
+	\node[] at (9, 0) {$\nu_3$};
+	\node[] at (9, 1) {$P_3 = 10$};
+
+	\draw[->, very thick, draw=blue](2, 0) -- (3, 0);
+	\node[] at (2.5, -0.6) {$Q_{12} = \num{0.81}$};
+	\draw[->, very thick, draw=blue](6.5, 0) -- (7.5, 0);
+	\node[] at (6.5, -0.6) {$Q_{23} = \num{0.81}$};
+	\end{tikzpicture}
+
+	\caption{}
+	\label{fig:102}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+
+	\begin{scope}[rotate=135]
+		\draw[fill=cw] (0, 0.21) rectangle (4, -0.21);
+		\draw[fill=cw] (4, 0) circle [radius = .5];
+		\node[] at (4, 0) {$\nu_1$};
+		\node[] at (5, 0) {$P_1 = 100$};
+		\draw[<-, very thick, draw=blue] (1.5, 0) -- (2.5, 0);
+		\node[] at (2, -0.9) {$Q_{13} = ?$};
+	\end{scope}
+
+	\begin{scope}[rotate=45]
+		\draw[fill=cw] (0, 0.20) rectangle (4, -0.20);
+		\draw[fill=cw] (4, 0) circle [radius = .5];
+		\node[] at (4, 0) {$\nu_2$};
+		\node[] at (5, 0) {$P_2 = 10$};
+		\draw[->, very thick, draw=blue] (1.5, 0) -- (2.5, 0);
+		\node[] at (2, -0.9) {$Q_{32} = ?$};
+	\end{scope}
+
+	\begin{scope}[rotate=-45]
+		\draw[fill=cw] (0, 0.23) rectangle (4, -0.23);
+		\draw[fill=cw] (4, 0) circle [radius = .5];
+		\node[] at (4, 0) {$\nu_4$};
+		\node[] at (5, 0) {$P_4 = 10$};
+		\draw[->, very thick, draw=blue] (1.5, 0) -- (2.5, 0);
+		\node[] at (2, -0.9) {$Q_{34} = ?$};
+	\end{scope}
+
+	\begin{scope}[rotate=-135]
+		\draw[fill=cw] (0, 0.20) rectangle (4, -0.20);
+		\draw[fill=cw] (4, 0) circle [radius = .5];
+		\node[] at (4, 0) {$\nu_5$};
+		\node[] at (5, 0) {$P_5 = 100$};
+		\draw[<-, very thick, draw=blue] (1.5, 0) -- (2.5, 0);
+		\node[] at (2, -0.9) {$Q_{53} = ?$};
+	\end{scope}
+	\draw[fill=cw] (0, 0) circle [radius = .5];
+	\node[] at (0, 0) {$\nu_3$};
+	\node[] at (1, 0) {$P_3 = ?$};
+	\end{tikzpicture}
+
+	\caption{}
+	\label{fig:101}
+\end{figure}
+
+\[
+	\mu = 1.5
+\]
+
+	$R_{13} = 0.8$, $R_{23} = 0.9$, $R_{34} = 1.0$, $R_{35} = 1.1$
+
+	$L_{13} =  L_{23} = L_{34} = L_{35} = 8$
