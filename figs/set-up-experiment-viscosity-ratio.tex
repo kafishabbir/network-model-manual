@@ -1,0 +1,59 @@
+\begin{tikzpicture}
+	\fill[cw] (0,0) rectangle (5, 5);
+	\fill[cnw, rounded corners=10pt] (0, 0) -- (2, 1) -- (1.5, 1.5) -- (3.5, 3.5) -- (0, 5) -- (0, 0);
+	\fill[cw, rounded corners=1pt] (0.8, 0.8) -- (1.1, 1) -- (1.3, 1.2) -- (1.2, 1.2) -- (0.7, 0.9) -- cycle;
+	\fill[cw, rounded corners=1pt] (0.8, 2.8) -- (1.1, 3) -- (1.2, 3.5) -- (1.0, 3.6) -- (0.6, 3) -- cycle;
+	\fill[pattern={north east lines}] (2.1,0) rectangle (2.4,5);
+	\draw (2.1, -0.5) -- (2.1, 5.5);
+	\draw (2.4, -0.5) -- (2.4, 5.5);
+	\draw[<->] (2.1, 5.3) -- (2.4, 5.3);
+	\node at (2.25, 5.8) {$\Delta x$};
+	\node at (-1, 0) {$P_{in}(t)$};
+	\node at (6, 0) {$P_{out} = 0$};
+	\node at (-1, 2.5) {$Q=const$};
+
+	\draw[->, draw=cnw, line width=4] (-1, 3.5) -- (0, 3.5);
+	\draw[->, draw=cnw, line width=4] (-1, 1.5) -- (0, 1.5);
+	\draw[->, draw=cw, line width=4] (5, 1.5) -- (6, 1.5);
+	\draw[->, draw=cw, line width=4] (5, 3.5) -- (6, 3.5);
+
+	\draw[] (0,0) -- (5, 0);
+	\draw[] (0,5) -- (5, 5);
+
+	\draw[-, thick] (0.5,4) -- (-0.5,5) node[left] {$w$};
+	\draw[-, thick] (4.5,4) -- (5.5,5) node[right] {$nw$};
+	
+\draw[->] (0, -6) -- (5.5, -6) node[pos=0.5, below] {$x$};
+\draw[->] (0, -6) -- (0, -0.5) node[pos=0.5, left] {$S(x)$};
+
+% Origin label
+\node at (-0.2, -6) {$0$};
+
+% Y-axis label at -1 (which is S=1.0)
+\node at (-0.3, -1) {$1.0$};
+
+% X-axis label at 5 (which is x=1.0)
+\node at (5, -6.3) {$1.0$};
+
+% Dashed grey reference lines
+\draw[dashed, gray, thin] (-0, -1) -- (5, -1);
+\draw[dashed, gray, thin] (5, -6) -- (5, -1);
+
+% Line 1: mu_nw / mu_w = 0.1 (largest amplitude) - BLUE (flipped y, shifted down by 1)
+\draw[very thick, blue] (0, -1) -- (0.5, -3.0) -- (1, -3.8) -- (4, -4) -- (4, -6) -- (5, -6);
+
+% Line 2: mu_nw / mu_w = 1 (medium amplitude) - GREEN (flipped y, shifted down by 1)
+\draw[very thick, green!70!black] (0, -1) -- (0.5, -2.8) -- (1, -2.9) -- (2, -3.0) -- (2.5, -3.2) -- (3, -3.5) -- (3, -6) -- (5, -6);
+
+% Line 3: mu_nw / mu_w = 10.0 (smallest amplitude, moved forward) - RED (flipped y, shifted down by 1)
+\draw[very thick, red] (0, -1) -- (0.3, -1.5) -- (0.6, -1.7) -- (1.3, -1.8) -- (1.6, -1.9) -- (2, -2) -- (2, -6) -- (5, -6);
+
+% Legend - left aligned
+\node[anchor=west] at (4.8, -2) {$\mu_{w} / \mu_{nw}$};
+\draw[very thick, blue] (5.2, -2.5) -- (6, -2.5);
+%\node[anchor=west] at (5.9, -2.5) {0.1};
+\draw[very thick, green!70!black] (5.2, -3.0) -- (6, -3.0);
+%\node[anchor=west] at (5.9, -3.0) {1};
+\draw[very thick, red] (5.2, -3.5) -- (6, -3.5);
+%\node[anchor=west] at (5.9, -3.5) {10.0};
+\end{tikzpicture}
